@@ -7,7 +7,7 @@ function App() {
   return (
     <main className="app-shell">
       <header className="page-header">
-        <p className="eyebrow">Pokédex · PokéAPI</p>
+        <p className="eyebrow">Pokédex with PokéAPI</p>
         <h1>Les générations Pokémon</h1>
         <p className="intro">
           Choisissez une génération pour découvrir ses jeux et ses Pokémon.
