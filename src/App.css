@@ -13,12 +13,16 @@
 }
 
 .eyebrow {
-  margin: 0 0 0.55rem;
-  color: #a4483f;
-  font-size: 0.75rem;
+  margin: 0 0 1rem;
+  color: white;
+  font-size: 2rem;
   font-weight: 700;
+  border: 1px solid #d64b48;
+  border-radius: 10px;
+  background: #d64b48;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h1,
@@ -164,12 +168,22 @@ h1 {
 }
 
 .pokemon-list li {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 0.55rem;
   padding: 0.55rem 0.65rem;
   border-radius: 7px;
   background: #f7f8f9;
   color: #454b55;
   font-size: 0.88rem;
   text-transform: capitalize;
+}
+
+.pokemon-item img {
+  flex: none;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 .error {

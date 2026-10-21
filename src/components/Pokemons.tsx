@@ -46,9 +46,27 @@ function Pokemons() {
           />
           {filteredPokemons.length > 0 ? (
             <ul className="pokemon-list">
-              {filteredPokemons.map((pokemon) => (
-                <li key={pokemon.name}>{pokemon.name}</li>
-              ))}
+              {filteredPokemons.map((pokemon) => {
+                const pokemonId = pokemon.url.split('/').filter(Boolean).at(-1)
+                const spriteUrl = pokemonId
+                  ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`
+                  : null
+
+                return (
+                  <li className="pokemon-item" key={pokemon.name}>
+                    {spriteUrl && (
+                      <img
+                        src={spriteUrl}
+                        alt=""
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                      />
+                    )}
+                    <span>{pokemon.name}</span>
+                  </li>
+                )
+              })}
             </ul>
           ) : (
             <p className="muted">Aucun Pokémon ne correspond à la recherche.</p>
