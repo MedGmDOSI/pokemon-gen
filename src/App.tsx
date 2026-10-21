@@ -27,6 +27,7 @@ function App() {
         <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">
           PokéAPI
         </a>
+        <img src="/image.png" alt="PokéAPI" style={{ height: '2rem', marginLeft: '1rem' }} />
       </footer>
     </main>
   )
